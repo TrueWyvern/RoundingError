@@ -1,7 +1,7 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Aisik Pilote
+ * rounding program
+ * check for the rounding error that comes with math.pow function and math.sqre function
  */
 
 package roundingerror;
@@ -17,12 +17,16 @@ public class RoundingError {
      */
     
     public static void main(String[] args) {
+        //user input
         Scanner scan = new Scanner(System.in);
         double a = scan.nextDouble();
+        //square number
         double square = Math.sqrt(a);
         System.out.println(square);
+        //reverse operation
         System.out.println(Math.pow(square, 2));
         double b = Math.pow(square, 2);
+        //check rounding error
         System.out.println("Roundoff error = " + (b-a));
     }
     
